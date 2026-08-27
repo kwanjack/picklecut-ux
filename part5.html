@@ -1,0 +1,191 @@
+n style="padding:6px 10px;border-radius:9px;color:#c7c7cf;font-size:12px;font-weight:600;">2×</span>
+            </div>
+            <div style="display:inline-flex;gap:8px;align-items:center;">
+              <div style="display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:16px;background:#0a84ff;color:#fff;font-size:12px;font-weight:600;"><span style="width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.28);display:inline-flex;align-items:center;justify-content:center;"><svg width="9" height="9" viewBox="0 0 24 24"><path d="M5 13 L10 18 L19 6" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Auto-skip</div>
+              <div style="display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:11px;background:rgba(28,28,30,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#fff;font-size:12px;font-weight:600;"><span style="color:#0a84ff;">[</span>Trim<span style="color:#0a84ff;">]</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#8a8a96;margin-top:14px;line-height:1.5;max-width:760px;">
+        <b style="color:#c9c9d2;">Always on:</b> a hairline scrubber, a small Play, and a rally counter. Point navigation moves off-screen into <b style="color:#c9c9d2;">edge gestures</b> — swipe left/right on the sides to jump rally-to-rally, double-tap for ±5s. Chevron hints pulse briefly then fade. <b style="color:#c9c9d2;">Tap to reveal</b> speed, Auto-skip & Trim. Most immersive; relies on discoverability.
+      </div>
+    </div>
+
+    <!-- ============ OPTION 1C — SMART DOCK ============ -->
+    <div id="1c" style="width:760px;flex:0 0 auto;">
+      <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:24px;padding:0 9px;border-radius:7px;background:#0a84ff;color:#fff;font-size:13px;font-weight:700;">1c</span>
+        <span style="font-size:19px;font-weight:650;color:#f2f2f5;">Smart Dock</span>
+        <span style="font-size:13px;color:#7c7c88;">— editor tools live on a slim side rail</span>
+      </div>
+
+      <div onPointerDown="{{ onDown1c }}" onPointerUp="{{ onUp1c }}" onPointerLeave="{{ onLeave1c }}" style="position:relative;width:760px;height:356px;border-radius:26px;overflow:hidden;background:#000;box-shadow:0 24px 60px -20px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);cursor:pointer;user-select:none;touch-action:none;">
+        <img src="https://img.youtube.com/vi/esZPJ7DmTy0/maxresdefault.jpg" alt="pickleball court" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <div style="{{ hold1c.rev }}"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 6 L6 12 L12 18 M18 6 L12 12 L18 18" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>2×</div>
+        <div style="{{ hold1c.fwd }}">2×<svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 6 L18 12 L12 18 M6 6 L12 12 L6 18" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+        <!-- always-on right tool rail -->
+        <div style="position:absolute;top:50%;right:14px;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;">
+          <div style="width:40px;height:40px;border-radius:13px;background:rgba(20,20,22,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#fff;"><span style="color:#0a84ff;font-size:16px;line-height:1;font-weight:700;">[</span><span style="font-size:8px;color:rgba(255,255,255,.75);">in</span></div>
+          <div style="width:40px;height:40px;border-radius:13px;background:rgba(20,20,22,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:#fff;"><span style="color:#0a84ff;font-size:16px;line-height:1;font-weight:700;">]</span><span style="font-size:8px;color:rgba(255,255,255,.75);">out</span></div>
+          <div style="width:40px;height:40px;border-radius:13px;background:#0a84ff;display:flex;align-items:center;justify-content:center;"><span style="width:17px;height:17px;border-radius:50%;background:rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;"><svg width="11" height="11" viewBox="0 0 24 24"><path d="M5 13 L10 18 L19 6" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+          <div style="width:40px;height:40px;border-radius:13px;background:rgba(20,20,22,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;letter-spacing:1px;">···</div>
+        </div>
+
+        <!-- always-on compact dock, bottom-left -->
+        <div style="position:absolute;left:16px;bottom:16px;display:flex;align-items:center;gap:6px;height:48px;padding:0 8px;border-radius:24px;background:rgba(20,20,22,.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 6px 20px rgba(0,0,0,.35);">
+          <div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M18 6 L10 12 L18 18 Z" fill="#fff"/><rect x="6" y="6" width="2.2" height="12" rx="1" fill="#fff"/></svg>
+          </div>
+          <div style="width:42px;height:42px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;">
+            <svg width="19" height="19" viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="#111"/></svg>
+          </div>
+          <div style="width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M6 6 L14 12 L6 18 Z" fill="#fff"/><rect x="15.8" y="6" width="2.2" height="12" rx="1" fill="#fff"/></svg>
+          </div>
+          <span style="font-size:12px;color:rgba(255,255,255,.9);font-weight:600;font-variant-numeric:tabular-nums;padding:0 8px 0 4px;">1:18 <span style="color:rgba(255,255,255,.5);">/ 9:35</span></span>
+        </div>
+
+        <!-- reveal: expanded dock (full scrubber + trim handles + speed) -->
+        <div style="{{ panel1c }}">
+          <div style="position:absolute;left:0;right:0;bottom:0;height:130px;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,0));"></div>
+          <div style="position:absolute;left:16px;right:16px;bottom:72px;">
+            <div style="position:relative;height:26px;">
+              <!-- track -->
+              <div style="position:absolute;top:50%;left:0;right:0;height:6px;transform:translateY(-50%);display:flex;gap:2px;align-items:center;">
+                <sc-for list="{{ segs }}" as="s" hint-placeholder-count="14"><div style="{{ s.styleFat }}"></div></sc-for>
+              </div>
+              <!-- trim region -->
+              <div style="position:absolute;top:50%;left:9%;width:34%;height:26px;transform:translateY(-50%);border:2px solid #ffd60a;border-radius:6px;background:rgba(255,214,10,.12);box-sizing:border-box;"></div>
+              <div style="position:absolute;top:50%;left:9%;width:9px;height:26px;transform:translate(-50%,-50%);background:#ffd60a;border-radius:4px;"></div>
+              <div style="position:absolute;top:50%;left:43%;width:9px;height:26px;transform:translate(-50%,-50%);background:#ffd60a;border-radius:4px;"></div>
+              <!-- playhead -->
+              <div style="position:absolute;top:50%;left:14%;width:13px;height:13px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 1px 4px rgba(0,0,0,.5);"></div>
+            </div>
+          </div>
+          <div style="position:absolute;left:16px;bottom:74px;"></div>
+          <div style="position:absolute;right:66px;bottom:22px;display:inline-flex;background:rgba(28,28,30,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:12px;padding:3px;gap:2px;">
+            <span style="padding:6px 10px;border-radius:9px;color:#c7c7cf;font-size:12px;font-weight:600;">0.5×</span>
+            <span style="padding:6px 10px;border-radius:9px;background:#fff;color:#111;font-size:12px;font-weight:700;">1×</span>
+            <span style="padding:6px 10px;border-radius:9px;color:#c7c7cf;font-size:12px;font-weight:600;">1.5×</span>
+            <span style="padding:6px 10px;border-radius:9px;color:#c7c7cf;font-size:12px;font-weight:600;">2×</span>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#8a8a96;margin-top:14px;line-height:1.5;max-width:760px;">
+        <b style="color:#c9c9d2;">Always on:</b> a compact play/point dock bottom-left, and a slim right rail for editor actions (trim In/Out, Auto-skip, ···) — navigation and editing stay one tap apart without a full bar. <b style="color:#c9c9d2;">Tap to reveal:</b> the dock expands into a full scrubber with yellow trim handles + speed. Best fit for "navigation + trimming".
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: { '1a': true, '1b': false, '1c': true, '2a': true }, hold: { '1a': null, '1b': null, '1c': null, '2a': null }, mode2a: 'nav' };
+  timers = {};
+
+  down(id, e) {
+    const r = e.currentTarget.getBoundingClientRect();
+    const side = (e.clientX - r.left) < r.width / 2 ? 'rev' : 'fwd';
+    this.timers[id] = setTimeout(() => {
+      this.timers[id] = null;
+      this.setState(s => ({ hold: { ...s.hold, [id]: side } }));
+    }, 200);
+  }
+  release(id, wasTap) {
+    if (this.timers[id]) { clearTimeout(this.timers[id]); this.timers[id] = null; if (wasTap) this.setState(s => ({ open: { ...s.open, [id]: !s.open[id] } })); return; }
+    if (this.state.hold[id]) this.setState(s => ({ hold: { ...s.hold, [id]: null } }));
+  }
+  holdView(id) {
+    const h = this.state.hold[id];
+    const base = { position: 'absolute', top: '50%', transform: 'translateY(-50%)', display: 'flex', alignItems: 'center', gap: '9px', height: '42px', padding: '0 20px', borderRadius: '21px', background: 'rgba(10,132,255,.9)', color: '#fff', fontSize: '17px', fontWeight: '700', backdropFilter: 'blur(18px)', WebkitBackdropFilter: 'blur(18px)', pointerEvents: 'none', boxShadow: '0 6px 20px rgba(0,0,0,.45)', transition: 'opacity .14s ease', zIndex: 5 };
+    return {
+      rev: { ...base, left: '26px', right: 'auto', opacity: h === 'rev' ? 1 : 0 },
+      fwd: { ...base, right: '26px', left: 'auto', opacity: h === 'fwd' ? 1 : 0 }
+    };
+  }
+
+  buildSegs() {
+    // f = flex weight, dead = dim gap between rallies
+    const raw = [
+      ['r',3],['d',1.4],['r',2.2],['d',1],['r',4],['d',1.8],['r',1.6],['d',1],
+      ['r',3.4],['d',2.2],['r',2],['d',1],['r',3.6],['d',1.4],['r',2.6],['d',1],['r',4.2]
+    ];
+    return raw.map(([t,f]) => {
+      const rally = t === 'r';
+      const base = { flexGrow: f, flexBasis: 0, height: '100%', borderRadius: '2px' };
+      return {
+        style:     { ...base, background: rally ? '#0a84ff' : 'rgba(255,255,255,.22)' },
+        styleThin: { ...base, background: rally ? '#0a84ff' : 'rgba(255,255,255,.22)' },
+        styleFat:  { ...base, height: '6px', borderRadius: '3px', background: rally ? '#0a84ff' : 'rgba(255,255,255,.22)' },
+        // spanTicks: only points draw a tint capsule; dead time is blank
+        styleTick: { flexGrow: f, flexBasis: 0, height: '3px', borderRadius: '2px', background: rally ? '#0a84ff' : 'transparent' },
+        // tall merged scrubber: point spans blue, dead time shows the dim track
+        styleScrub: { flexGrow: f, flexBasis: 0, borderRadius: '4px', background: rally ? '#0a84ff' : 'transparent' },
+        // overview rail: thin full-match strip under the lens
+        styleOverview: { flexGrow: f, flexBasis: 0, height: '100%', borderRadius: '2px', background: rally ? 'rgba(10,132,255,.85)' : 'transparent' },
+        // edit strip: green = point, dark = dead
+        styleEdit: { flexGrow: f, flexBasis: 0, alignSelf: 'stretch', background: rally ? 'rgba(52,199,89,.55)' : 'rgba(255,255,255,.10)' }
+      };
+    });
+  }
+
+  buildTicks() {
+    // frame-level ruler: tall ticks = whole seconds, short = frames
+    const out = [];
+    for (let i = 0; i < 19; i++) {
+      const major = i % 3 === 0;
+      out.push({ style: {
+        width: major ? '1.5px' : '1px',
+        height: major ? '12px' : '6px',
+        borderRadius: '1px',
+        background: major ? 'rgba(255,255,255,.6)' : 'rgba(255,255,255,.28)'
+      }});
+    }
+    return out;
+  }
+
+  panel(on) {
+    return {
+      position: 'absolute', inset: 0,
+      opacity: on ? 1 : 0,
+      transform: on ? 'translateY(0)' : 'translateY(10px)',
+      pointerEvents: on ? 'auto' : 'none',
+      transition: 'opacity .3s ease, transform .3s ease'
+    };
+  }
+
+  renderVals() {
+    const open = this.state.open;
+    const dn = (id) => (e) => this.down(id, e);
+    const up = (id) => () => this.release(id, true);
+    const lv = (id) => () => this.release(id, false);
+    return {
+      segs: this.buildSegs(),
+      ticks: this.buildTicks(),
+      onDown1a: dn('1a'), onUp1a: up('1a'), onLeave1a: lv('1a'),
+      onDown1b: dn('1b'), onUp1b: up('1b'), onLeave1b: lv('1b'),
+      onDown1c: dn('1c'), onUp1c: up('1c'), onLeave1c: lv('1c'),
+      onDown2a: dn('2a'), onUp2a: up('2a'), onLeave2a: lv('2a'),
+      hold1a: this.holdView('1a'), hold1b: this.holdView('1b'), hold1c: this.holdView('1c'), hold2a: this.holdView('2a'),
+      panel1a: this.panel(open['1a']),
+      panel1b: this.panel(open['1b']),
+      panel1c: this.panel(open['1c']),
+      ...this.merged()
+    };
+  }
+
+  merged() {
+    const shown = this.state.open['2a'];
+    const h = this.state.hold['2a'];
+    // always-visible black hold-zone capsules; brighten on press (PlayerView.holdZone)
+    const zone = (active) => ({ position: 'absolute', top: '50%', transform: 'translateY(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3px', padding: '16px 9px', borderRadius: '999px', background: active ? 'rgba(0,0,0,.55)' : 'rgba(0,0,0,.22)', color: active ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,.55)', fontSize: '12px', fontWeight: '700', pointerEvents: 'none', transition: 'all .14s ease', zIndex: 5 });
+    return {
+      chrome2a: { position: 'absolute', inset: 0, opacity: shown ? 1 : 0, pointerEvents: shown ? 'auto' : 'none', transition: 'opacity .2s ease' },
+      hold2a: { rev: { ...zone(h === 'rev'), left: '8px' }, fwd: { ...zone(h === 'fwd'), right: '8px' } }
+    };
+  }
+}
+</script>
