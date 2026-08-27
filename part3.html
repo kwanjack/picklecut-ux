@@ -1,0 +1,168 @@
+        <!-- hold-to-speed zones — ALWAYS visible, edge-hugging, vertically centered -->
+        <div style="{{ hold2a.rev }}"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M11 6 L5 12 L11 18 Z M18 6 L12 12 L18 18 Z" fill="#fff"/></svg>2×</div>
+        <div style="{{ hold2a.fwd }}">2×<svg width="15" height="15" viewBox="0 0 24 24"><path d="M13 6 L19 12 L13 18 Z M6 6 L12 12 L6 18 Z" fill="#fff"/></svg></div>
+
+        <!-- chrome: top pill bar + bottom bar; toggled by tap -->
+        <div style="{{ chrome2a }}">
+          <!-- top scrim -->
+          <div style="position:absolute;top:0;left:0;right:0;height:96px;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0));pointer-events:none;"></div>
+
+          <!-- TOP BAR -->
+          <div style="position:absolute;top:12px;left:12px;right:12px;display:flex;align-items:center;gap:8px;">
+            <!-- point status pill (label only — tap to open Points sheet; navigation is the center circles) -->
+            <div style="display:flex;align-items:center;gap:10px;height:40px;padding:0 15px;border-radius:20px;background:rgba(44,44,50,.5);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);color:#fff;">
+              <div style="display:flex;flex-direction:column;line-height:1.15;">
+                <span style="font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;">Point 3/14</span>
+                <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,.6);font-variant-numeric:tabular-nums;white-space:nowrap;">3–2 near</span>
+              </div>
+              <svg width="13" height="13" viewBox="0 0 24 24" style="opacity:.55;"><path d="M9 5 L16 12 L9 19" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+
+            <!-- segmented speed picker (moved up next to point-nav) -->
+            <div style="display:inline-flex;background:rgba(44,44,50,.5);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:10px;padding:3px;gap:1px;">
+              <span style="padding:5px 8px;border-radius:7px;color:#e9e9ee;font-size:11px;font-weight:600;">0.25×</span>
+              <span style="padding:5px 8px;border-radius:7px;color:#e9e9ee;font-size:11px;font-weight:600;">0.5×</span>
+              <span style="padding:5px 9px;border-radius:7px;background:#fff;color:#111;font-size:11px;font-weight:700;">1×</span>
+              <span style="padding:5px 8px;border-radius:7px;color:#e9e9ee;font-size:11px;font-weight:600;">1.5×</span>
+              <span style="padding:5px 9px;border-radius:7px;color:#e9e9ee;font-size:11px;font-weight:600;">2×</span>
+            </div>
+
+            <div style="flex:1;"></div>
+
+            <!-- Best pill (idle) -->
+            <div style="display:flex;align-items:center;gap:5px;height:32px;padding:0 11px;border-radius:16px;background:rgba(44,44,50,.5);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);color:rgba(255,255,255,.62);font-size:13px;font-weight:700;">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 3.5 L14.6 9 L20.5 9.7 L16.2 13.8 L17.4 19.6 L12 16.7 L6.6 19.6 L7.8 13.8 L3.5 9.7 L9.4 9 Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              Best
+            </div>
+            <!-- Auto-skip pill (ON — filled tint) -->
+            <div style="display:flex;align-items:center;gap:5px;height:32px;padding:0 11px;border-radius:16px;background:#0a84ff;color:#fff;font-size:13px;font-weight:700;">
+              <svg width="15" height="15" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="rgba(255,255,255,.28)"/><path d="M7.5 12.2 L10.5 15 L16.5 8.8" stroke="#fff" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Auto-skip
+            </div>
+            <!-- ellipsis menu pill -->
+            <div style="display:flex;align-items:center;justify-content:center;width:34px;height:32px;border-radius:16px;background:rgba(44,44,50,.5);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);color:#fff;font-size:16px;font-weight:800;letter-spacing:1px;">···</div>
+          </div>
+
+          <!-- CENTER CONTROLS — frame− · prev-point · play · next-point · frame+ -->
+          <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:24px;">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(20,20,24,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+              <svg width="26" height="17" viewBox="0 0 32 20"><path d="M5 6.5 L1.5 11.5 L5 16.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 14.5 Q11 7 18.5 7 Q26 7 26 14.5 Z" fill="#fff"/><circle cx="8.7" cy="12" r="2.1" fill="#fff"/><path d="M28 12.6 L30.4 13.8 L28 14.8" fill="#fff"/><path d="M12.6 14.5 L11.8 17.4 M16.6 15 L16.1 17.8 M20.9 15 L21.5 17.8 M24.9 14.5 L25.9 17.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div style="width:52px;height:52px;border-radius:50%;background:rgba(20,20,24,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24"><rect x="5" y="6" width="2.4" height="12" rx="1" fill="#fff"/><path d="M20 6 L11 12 L20 18 Z" fill="#fff"/></svg>
+            </div>
+            <div style="width:74px;height:74px;border-radius:50%;background:rgba(20,20,24,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;">
+              <svg width="34" height="34" viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="#fff"/></svg>
+            </div>
+            <div style="width:52px;height:52px;border-radius:50%;background:rgba(20,20,24,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 6 L13 12 L4 18 Z" fill="#fff"/><rect x="16.6" y="6" width="2.4" height="12" rx="1" fill="#fff"/></svg>
+            </div>
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(20,20,24,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;">
+              <svg width="26" height="17" viewBox="0 0 32 20"><path d="M6 14.5 Q6 7 13.5 7 Q21 7 21 14.5 Z" fill="#fff"/><circle cx="23.3" cy="12" r="2.1" fill="#fff"/><path d="M4 12.6 L1.6 13.8 L4 14.8" fill="#fff"/><path d="M7.1 14.5 L6.3 17.4 M11.1 15 L10.6 17.8 M15.4 15 L16 17.8 M19.4 14.5 L20.4 17.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M27 6.5 L30.5 11.5 L27 16.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+
+          <!-- BOTTOM BAR — just the blue+gray segmented scrubber -->
+          <div style="position:absolute;left:14px;right:14px;bottom:14px;display:flex;align-items:center;gap:11px;">
+            <span style="font-size:12px;color:rgba(255,255,255,.95);font-weight:600;font-variant-numeric:tabular-nums;min-width:30px;text-shadow:0 1px 3px rgba(0,0,0,.6);">1:58</span>
+            <div style="position:relative;flex:1;height:16px;">
+              <div style="position:absolute;inset:0;border-radius:6px;background:rgba(255,255,255,.20);overflow:hidden;">
+                <div style="position:absolute;inset:0;display:flex;gap:2px;align-items:stretch;padding:0 1px;">
+                  <sc-for list="{{ segs }}" as="s" hint-placeholder-count="14"><div style="{{ s.styleScrub }}"></div></sc-for>
+                </div>
+              </div>
+              <div style="position:absolute;top:50%;left:22%;width:7px;height:24px;border-radius:4px;background:#fff;transform:translate(-50%,-50%);box-shadow:0 1px 5px rgba(0,0,0,.55);"></div>
+            </div>
+            <span style="font-size:12px;color:rgba(255,255,255,.6);font-weight:600;font-variant-numeric:tabular-nums;min-width:30px;text-align:right;text-shadow:0 1px 3px rgba(0,0,0,.6);">9:35</span>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#8a8a96;margin-top:14px;line-height:1.5;max-width:840px;">
+        <b style="color:#c9c9d2;">Always on:</b> the two edge hold-zones (long-press → ±2×, work even with chrome hidden). <b style="color:#c9c9d2;">Top bar:</b> point status label (<b style="color:#c9c9d2;">Point 3/14</b> + score call, tap → Points sheet) and the speed picker, then Best, Auto-skip (on), and ⋯ menu. <b style="color:#c9c9d2;">Center:</b> frame− · prev-point · big play/pause · next-point · frame+ (the smaller frame buttons step one frame, 1/30s, each tap). <b style="color:#c9c9d2;">Bottom:</b> nothing but time + the <b style="color:#c9c9d2;">blue/gray segmented scrubber</b> (blue = point spans, dim = dead time, white playhead). Tap video → hide chrome; auto-hides after 3s while playing.
+      </div>
+    </div>
+
+    <!-- ===== 2c — ZOOMABLE SCRUBBER ===== -->
+    <div id="2c" style="width:840px;flex:0 0 auto;">
+      <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:24px;padding:0 9px;border-radius:7px;background:#0a84ff;color:#fff;font-size:13px;font-weight:700;">2c</span>
+        <span style="font-size:19px;font-weight:650;color:#f2f2f5;">Zoom to scrub</span>
+        <span style="font-size:13px;color:#7c7c88;">— pinch the scrubber for frame-level precision</span>
+      </div>
+
+      <div style="position:relative;width:840px;height:394px;border-radius:26px;overflow:hidden;background:#000;box-shadow:0 24px 60px -20px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);user-select:none;">
+        <img src="https://img.youtube.com/vi/esZPJ7DmTy0/maxresdefault.jpg" alt="pickleball court" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0) 42%);"></div>
+
+        <!-- pinch-gesture hint (fingers spreading) -->
+        <div style="position:absolute;left:50%;bottom:132px;transform:translateX(-50%);display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.9);">
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M13 20 L13 9 M13 9 L13 6.5 A1.6 1.6 0 0 1 16.2 6.5 L16.2 12 M16.2 10 A1.6 1.6 0 0 1 19.4 10 L19.4 13 M9.5 13 L7 10.5 A1.6 1.6 0 0 0 4.8 12.8 L8.5 17 A5 5 0 0 0 13 20" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <svg width="46" height="14" viewBox="0 0 46 14"><path d="M2 7 H16 M16 7 L11 3 M16 7 L11 11" stroke="rgba(255,255,255,.55)" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M44 7 H30 M30 7 L35 3 M30 7 L35 11" stroke="rgba(255,255,255,.55)" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M11 20 L11 9 M11 9 L11 6.5 A1.6 1.6 0 0 0 7.8 6.5 L7.8 12 M7.8 10 A1.6 1.6 0 0 0 4.6 10 L4.6 13 M14.5 13 L17 10.5 A1.6 1.6 0 0 1 19.2 12.8 L15.5 17 A5 5 0 0 1 11 20" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+
+        <!-- ZOOMED TIMELINE STACK (bottom) -->
+        <div style="position:absolute;left:14px;right:14px;bottom:14px;display:flex;flex-direction:column;gap:9px;">
+
+          <!-- overview rail — whole match, with draggable lens window -->
+          <div style="position:relative;height:12px;">
+            <div style="position:absolute;inset:0;border-radius:5px;background:rgba(255,255,255,.14);overflow:hidden;display:flex;gap:2px;padding:0 1px;align-items:stretch;">
+              <sc-for list="{{ segs }}" as="s" hint-placeholder-count="14"><div style="{{ s.styleOverview }}"></div></sc-for>
+            </div>
+            <!-- lens window (the magnified region) -->
+            <div style="position:absolute;top:-3px;bottom:-3px;left:20%;width:16%;border-radius:6px;border:2px solid #fff;background:rgba(10,132,255,.18);box-shadow:0 2px 10px rgba(0,0,0,.5);"></div>
+          </div>
+
+          <!-- magnified scrubber — the lens window expanded to full width, with tick ruler -->
+          <div style="position:relative;padding:10px 12px 12px;border-radius:14px;background:rgba(30,32,38,.55);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums;">2:04.10</span>
+              <!-- zoom control pill -->
+              <div style="display:inline-flex;align-items:center;gap:8px;height:26px;padding:0 4px 0 10px;border-radius:13px;background:rgba(255,255,255,.14);">
+                <svg width="13" height="13" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#fff" stroke-width="1.9"/><path d="M15.5 15.5 L20 20" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg>
+                <span style="font-size:11px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums;">3.2×</span>
+                <span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;border-radius:10px;background:rgba(255,255,255,.16);font-size:10.5px;font-weight:700;color:#fff;">Fit</span>
+              </div>
+              <span style="font-size:11px;font-weight:600;color:rgba(255,255,255,.55);font-variant-numeric:tabular-nums;">2:22.24</span>
+            </div>
+            <!-- tick ruler -->
+            <div style="position:relative;height:12px;margin-bottom:5px;">
+              <div style="position:absolute;inset:0;display:flex;justify-content:space-between;align-items:flex-end;">
+                <sc-for list="{{ ticks }}" as="t" hint-placeholder-count="19"><div style="{{ t.style }}"></div></sc-for>
+              </div>
+            </div>
+            <!-- enlarged segmented track (window contents) -->
+            <div style="position:relative;height:18px;">
+              <div style="position:absolute;inset:0;border-radius:6px;background:rgba(255,255,255,.20);overflow:hidden;">
+                <!-- dead gap · point (blue) · dead gap — enlarged -->
+                <div style="position:absolute;top:0;bottom:0;left:0;width:22%;background:rgba(255,255,255,.10);"></div>
+                <div style="position:absolute;top:0;bottom:0;left:22%;width:56%;background:#0a84ff;"></div>
+                <div style="position:absolute;top:0;bottom:0;left:78%;width:22%;background:rgba(255,255,255,.10);"></div>
+              </div>
+              <!-- playhead with time flag -->
+              <div style="position:absolute;top:-4px;bottom:-4px;left:47%;width:3px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.4);"></div>
+              <div style="position:absolute;top:-26px;left:47%;transform:translateX(-50%);padding:2px 7px;border-radius:6px;background:#fff;color:#111;font-size:10.5px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;">2:12.07</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="font-size:13px;color:#8a8a96;margin-top:14px;line-height:1.5;max-width:840px;">
+        <b style="color:#c9c9d2;">Pinch out</b> anywhere on the scrubber to zoom in — the bar stops showing the whole match and expands a <b style="color:#c9c9d2;">window</b> around the playhead for finer scrubbing; pinch in to zoom back out. <b style="color:#c9c9d2;">Overview rail</b> (top) always shows the full match with a bright <b style="color:#c9c9d2;">lens box</b> marking the visible window — drag it to pan fast, or drag the big track to nudge. As you zoom deeper the <b style="color:#c9c9d2;">tick ruler</b> steps from seconds → tenths → single frames (1/30s), and the playhead carries a live <b style="color:#c9c9d2;">timecode flag</b> so you can land on an exact frame. The <b style="color:#c9c9d2;">3.2× · Fit</b> pill shows current zoom; tap <b style="color:#c9c9d2;">Fit</b> to snap back to the whole match.
+      </div>
+    </div>
+
+    <!-- ===== 2b — EDIT TIMELINE ===== -->
+    <div id="2b" style="width:840px;flex:0 0 auto;">
+      <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:24px;padding:0 9px;border-radius:7px;background:#0a84ff;color:#fff;font-size:13px;font-weight:700;">2b</span>
+        <span style="font-size:19px;font-weight:650;color:#f2f2f5;">Edit timeline</span>
+        <span style="font-size:13px;color:#7c7c88;">— the ⋯ → “Edit timeline” overlay</span>
+      </div>
+
+      <div style="position:relative;width:840px;height:394px;border-radius:26px;overflow:hidden;background:#000;box-shadow:0 24px 60px -20px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.05);user-select:none;">
+        <img src="https://img.youtube.com/vi/esZPJ7DmTy0/maxresdefault.jpg" alt="pickleball court" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72;">
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.28);"></div>
+
+        <!-- edit overlay: EditTimelineView strip + control row -->
+        <div style="position:absolute;left:12px;right:12px;bottom:8p
